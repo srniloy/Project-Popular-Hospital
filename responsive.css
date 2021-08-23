@@ -1,0 +1,197 @@
+
+
+/* 
+According to the Worldwide Screen Resolution Stats (Jan 2020 – Jan 2021)
+
+1920×1080 (8.89%)
+1366×768 (8.44%)
+360×640 (7.28%)
+414×896 (4.58%)
+1536×864 (3.88%)
+375×667 (3.75%)
+
+for large tablet - max-width: 991px;
+for medium tablet - max-width: 767px;
+for mobile phone  - max-width: 479px;
+
+tablets:
+Name    -                resulation   -  Viewport
+Nexus 9 -	            (1536 x 2048) - (768 x 1024)
+Nexus 7 (2013) -        (1200 x 1920) - (600 x 960)
+Pixel C -	            (1800 x 2560) - (900 x 1280)
+Samsung Galaxy Tab 10 - (800 x 1280) - (800 x 1280)
+Chromebook Pixel -      (2560 x 1700) - (1280 x 850)
+
+*/
+
+
+
+
+
+
+
+
+
+/* =============================== For 1366×768 resulations device Start =========================== */
+
+
+@media(max-width:1200px){
+    .content-width{
+        width:1000px;
+    }
+    .search-bar{
+        width: 200px;
+    }
+    .navbar-unorder-list ul li a{
+        padding: 0 8px;
+    }
+
+
+
+
+
+
+
+
+
+}
+
+@media(max-width:1100px){
+    .content-width{
+        width:920px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+/* =============================== For 1366×768 resulations device End =========================== */
+
+
+
+
+/* =============================== Max Width 1050px Start =========================== */
+
+@media (max-width: 991px) {
+    .content-width{
+        width:700px;
+    }
+    .sliding-info{
+        flex: 4;
+    }
+    .social-icons{
+        display: none;
+    }
+    .third-col-of-second{
+        display: none;
+    }
+    .top-middle-second-col{
+        flex: 8;
+    }
+    .navbar-unorder-list{
+        display: none;
+        
+    }
+    .search-bar{
+        margin-right: 50px;
+        width: 40%;
+        height: fit-content;
+        padding: 8px 10px;
+    }
+    .top-navbar-container{
+        flex-direction: row-reverse;
+        justify-content: right;
+    }
+    .top-navbar{
+        padding: 8px 0px;
+    }
+    .top-navbar-container .menuBtn{
+        display: block;
+    }
+
+
+
+
+
+
+
+
+
+}
+
+
+@media (max-width: 767px) {
+    .content-width{
+        width:400px;
+    }
+    .top-middle-second-col{
+        display: none;
+    }
+
+
+
+
+}
+
+
+
+/* =============================== Max Width 1050px End =========================== */
+
+
+
+
+/* =============================== Max Width 500px Start =========================== */
+
+
+@media (max-width: 500px) {
+    .content-width{
+        width: 90%;
+    }
+    .flash-info .flash-item a{
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .search-bar{
+        width: 50%;
+    }
+    .top-middle-third-col{
+        margin-left: 10px;
+    }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+/* =============================== Max Width 500px End =========================== */
+
+
+
+
+
+
+
+
+
+
+
