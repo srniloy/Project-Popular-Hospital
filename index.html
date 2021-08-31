@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Popular Diagnostic Centre Ltd.</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
-    <script src="https://kit.fontawesome.com/af9aae0551.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 </head>
 <body>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="social-icons">
                     <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-youtube"></i></a>
+                    <a href=""><i class="fa fa-youtube-play"></i></a>
                     <a href=""><i class="fa fa-linkedin"></i></a>
                     <a href=""><i class="fa fa-instagram"></i></a>
                     
@@ -118,15 +118,40 @@
                 <div class="menuBtn"><i class="fa fa-bars"></i></div>
                 <div class="navbar-unorder-list">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Our Services</a></li>
-                        <li><a href="#">Doctors</a></li>
-                        <li><a href="#">Branches</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">News & Media</a></li>
-                        <li><a href="#">Career</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li class = "parent-list"><a href="#" class="parent-a">Home</a></li>
+                        <li class="top-nav-dropdown-li parent-list">
+                            <a href="#" class="parent-a">About Us</a>
+                            <ul class="top-nav-dropdown-ul parent-list">
+                                <li><a href="">	Goal & Objectives </a></li>
+                                <li><a href="">	Message From Chairman </a></li>
+                                <li><a href="">	Message From Managing Director </a></li>
+                                <li><a href="">	Management Team </a></li>
+                            </ul>
+                        </li>
+                        <li class="top-nav-dropdown-li parent-list">
+                            <a href="#" class="parent-a">Our Services</a>
+                            <ul class="top-nav-dropdown-ul">
+                                <li><a href="#">Imaging</a></li>
+                                <li><a href="#">Pathology </a></li>
+                                <li><a href="#">Pharmacy </a></li>
+                                <li><a href="#">Test and Service Charges </a></li>
+                                <li><a href="#">Health Packages </a></li>
+                            </ul>
+                        </li>
+                        <li class = "parent-list"><a href="#" class="parent-a">Doctors</a></li>
+                        <li class = "parent-list"><a href="#" class="parent-a">Branches</a></li>
+                        <li class = "parent-list"><a href="#" class="parent-a">Gallery</a></li>
+                        <li class="top-nav-dropdown-li parent-list">
+                            <a href="#" class="parent-a">News & Media</a>
+                            <ul class="top-nav-dropdown-ul">
+                                <li><a href="#">News & Notices </a></li>
+                                <li><a href="#">Events </a></li>
+                                <li><a href="#">Blogs </a></li>
+                                <li><a href="#">Corporate Videos</a></li>
+                            </ul>
+                        </li>
+                        <li class = "parent-list"><a href="#" class="parent-a">Career</a></li>
+                        <li class = "parent-list"><a href="#" class="parent-a">Contact</a></li>
                     </ul>
                 </div>
                 <div class="search-bar">
@@ -144,15 +169,69 @@
 
     <!-- ====================== Top Contents End =============================-->
 
+    <!----------------------- Carousel Slider Start ------------------>
 
+
+    <div class="carousel-slider1">
+        <div class="carousel-slider1-area">
+            <div class="left-btn"><canvas height="100" width="100"></canvas><i class="fa fa-angle-left"></i></div>
+            <div class="right-btn"><canvas height="100" width="100"></canvas><i class="fa fa-angle-right"></i></div>
+            <div class="carousel-slider1-container">
+                <div class="slide">
+                    <div class="content">
+                        <h5>Happy to see you healthy</h5>
+                        <h1>A Well equipped Cutting-edge</h1>
+                        <button>Learn More <i class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <h5 style="color: #fff;">Happy to see you healthy</h5>
+                        <h1 style="color: #fff;">The Trusted and friendly <br>medical professionals</h1>
+                        <button>Learn More <i class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <h5>Happy to see you healthy</h5>
+                        <h1>High quality, Appropriate <br>and Accessible medical care
+                        </h1>
+                        <button>Learn More <i class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <h5 style="color: #fff;">Happy to see you healthy</h5>
+                        <h1 style="color: #fff;">The art of our medical service <br>amuses the patients</h1>
+                        <button>Learn More <i class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!----------------------- Carousel Slider End ------------------>
 
 
 
 
 
     
-
-    <script src="script.js"></script>
+    <div style = "height: 2000px; width: 100%;"></div>
+    <script src="script.js" type="module"></script>
     <script src="responsive.js"></script>
 </body>
 </html>

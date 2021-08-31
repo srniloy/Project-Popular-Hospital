@@ -228,7 +228,10 @@ a{
     list-style-type: none;
 }
 .navbar-unorder-list ul li{
-    border-left: 1px solid #038a44;
+    border-right: 1px solid #038a44;
+}
+.navbar-unorder-list ul li:last-child{
+    border-right: none;
 }
 .navbar-unorder-list ul li a{
     line-height: 60px;
@@ -266,6 +269,40 @@ a{
     margin-left: 5px;
 }
 
+.top-nav-dropdown-li{
+    position: relative;
+}
+.navbar-unorder-list ul .top-nav-dropdown-ul{
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    background-color: #fff;
+    width:max-content;
+    display: none;
+    transition: all 200ms;
+    opacity: 0;
+    z-index: 100;
+
+}
+.navbar-unorder-list ul .top-nav-dropdown-ul li{
+    border-top: 1px solid #ddd;
+    border-right: none;
+}
+.navbar-unorder-list ul .top-nav-dropdown-ul li:first-child{
+    border-top: none;
+}
+
+.navbar-unorder-list ul .top-nav-dropdown-ul li a{
+    line-height: 35px;
+    padding: 0px 30px 0px 15px;
+    color: #444;
+    font-size: 12px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+
+
 
 
 /* == Top Navigation Bar End == */
@@ -275,4 +312,154 @@ a{
 
 
 
-/* ================================ Top Contents Stop ======================== */
+/* ======== Top Contents Stop ====== */
+
+
+
+/*   Carousel slider-------------------->     */
+
+
+.carousel-slider1{
+    width: 100%;
+    height: 425px;
+}
+.carousel-slider1-area{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.carousel-slider1-area .left-btn,
+.carousel-slider1-area .right-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    cursor: pointer;
+    color: #00a04d;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    /* display: none;
+    opacity: 0; */
+    transition: all 500ms;
+}
+.carousel-slider1-area .left-btn i,
+.carousel-slider1-area .right-btn i{
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.carousel-slider1-area .left-btn i{
+    left: 45%; 
+}
+.carousel-slider1-area .right-btn i{
+    left: 53%;
+}
+
+.carousel-slider1-area .left-btn canvas,
+.carousel-slider1-area .right-btn canvas{
+    height: 50px;
+    width: 50px;
+    background-color: rgba(34, 34, 34, 0.7);
+    border-radius: 50%;
+}
+
+.carousel-slider1-area .left-btn i:hover,
+.carousel-slider1-area .right-btn i:hover{
+    color: #00d467;
+}
+
+.carousel-slider1-area .left-btn,
+.carousel-slider1-area .right-btn{
+    font-size: 40px;
+}
+.carousel-slider1-area .left-btn {
+    left: 4%;
+}
+.carousel-slider1-area .right-btn{
+    right: 4%;
+}
+.carousel-slider1-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-slider1-container .slide{
+    /* width: from js; */
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+.carousel-slider1-container .slide:first-child{
+   opacity: 1;
+}
+.carousel-slider1-container .slide .content{
+    position: absolute;
+    left: 18%;
+    top: 16%;
+    text-transform: capitalize;
+    letter-spacing: 0.7px;
+    transition: all 1s;
+}
+.carousel-slider1-container .slide .content h5{
+    font-size: 18px;
+    font-weight: 500;
+    transform: translateY(-20px);
+    transition: transform 1s;
+    opacity: 0;
+}
+.carousel-slider1-container .active-carousel-slide-h5 .content h5{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.carousel-slider1-container .slide .content h1{
+    margin-top: 15px;
+    transition: transform 1s;
+    transform: scaleX(1.5);
+    opacity: 0;
+}
+.carousel-slider1-container .active-carousel-slide-h1 .content h1{
+    transform: scale(1);
+    opacity: 1;
+}
+.carousel-slider1-container .slide .content button{
+    background-color: #00984a;
+    opacity: 0;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin-top: 50px;
+    transform: translateY(30px);
+    transition: transform 1s;
+    border-radius: 5px;
+}
+.carousel-slider1-container .active-carousel-slide-button .content button{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.carousel-slider1-container .slide .content button i{
+    margin-left: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  <-------------------------------- */
