@@ -139,6 +139,15 @@ Chromebook Pixel -      (2560 x 1700) - (1280 x 850)
     .top-middle-second-col{
         display: none;
     }
+    .carousel-slider1{
+        height: 325px;
+        font-size: 10px;
+    }
+    .carousel-slider1-container .slide .content{
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%,-50%);
+    }
 
 
 
@@ -168,6 +177,12 @@ Chromebook Pixel -      (2560 x 1700) - (1280 x 850)
     }
     .top-middle-third-col{
         margin-left: 10px;
+    }
+    .carousel-slider1-container .slide .content h1{
+        font-size: 2em;
+    }
+    .carousel-slider1{
+        height: 280px;
     }
 
 
