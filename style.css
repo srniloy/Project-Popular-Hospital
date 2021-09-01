@@ -339,11 +339,13 @@ a{
     color: #00a04d;
     height: 50px;
     width: 50px;
-    border-radius: 50%;
-    /* display: none;
-    opacity: 0; */
+    /* border-radius: 50%; */
+    /* display: none; */
+    /* opacity: 0; */
+    background-color: rgba(34, 34, 34, 0);
     transition: all 500ms;
 }
+
 .carousel-slider1-area .left-btn i,
 .carousel-slider1-area .right-btn i{
     height: 40px;
@@ -351,6 +353,7 @@ a{
     text-align: center;
     border-radius: 50%;
     position: absolute;
+    font-size: 1em;
     top: 50%;
     transform: translate(-50%,-50%);
 }
@@ -363,8 +366,8 @@ a{
 
 .carousel-slider1-area .left-btn canvas,
 .carousel-slider1-area .right-btn canvas{
-    height: 50px;
-    width: 50px;
+    height: 100%;
+    width: 100%;
     background-color: rgba(34, 34, 34, 0.7);
     border-radius: 50%;
 }
@@ -407,7 +410,6 @@ a{
     position: absolute;
     left: 18%;
     top: 16%;
-    background-color: #0073ab;
     height: min-content;
     width: fit-content;
     text-transform: capitalize;

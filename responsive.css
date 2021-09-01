@@ -184,6 +184,19 @@ Chromebook Pixel -      (2560 x 1700) - (1280 x 850)
     .carousel-slider1{
         height: 280px;
     }
+    .carousel-slider1-area .left-btn,
+    .carousel-slider1-area .right-btn{
+        height: 40px;
+        width: 40px;
+    }
+    .carousel-slider1-area .left-btn i,
+    .carousel-slider1-area .right-btn i{
+        font-size: 0.8em;
+        left: 50%;
+        top: 55%;
+        height: 30px;
+        width: 30px;
+    }
 
 
 

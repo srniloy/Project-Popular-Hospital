@@ -120,6 +120,12 @@ let Cslider1SlidesNumber=0;
 let btnSide = 1;
 var slideLoadingInterval;
 
+
+
+
+
+
+
 window.onload = ()=>{
     carouselSliding();
 }
@@ -171,7 +177,8 @@ function carouselSliding(){
 
 let CsliderLeftBtnEnable = true;
 let CsliderRightBtnEnable = true;
-Cslider1LeftBtn.addEventListener('click',()=>{
+Cslider1LeftBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
     if(CsliderLeftBtnEnable){
         Cslider1SlidesNumber--;
         carouselSliding();
@@ -187,7 +194,8 @@ Cslider1LeftBtn.addEventListener('click',()=>{
         }, 3000);
     }
 });
-Cslider1RightBtn.addEventListener('click',()=>{
+Cslider1RightBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
     if(CsliderRightBtnEnable){
         Cslider1SlidesNumber++;
         carouselSliding();
@@ -205,6 +213,51 @@ Cslider1RightBtn.addEventListener('click',()=>{
     
 
 });
+
+
+// For touch in mobile ---->
+
+Cslider1LeftBtnBox.addEventListener('touchstart',(e)=>{
+    e.preventDefault();
+    clearInterval(slidingAutoAnimate);
+    if(CsliderLeftBtnEnable){
+        Cslider1SlidesNumber--;
+        carouselSliding();
+        btnSide = 0;
+        slideLoadingInterval = setInterval(SlideLoading,25);
+        CsliderLeftBtnEnable = false;
+        CsliderRightBtnEnable = false;
+        Cslider1LeftBtn.style.display = "none";
+        setTimeout(() => {
+            CsliderLeftBtnEnable = true; 
+            CsliderRightBtnEnable = true; 
+            Cslider1LeftBtn.style.display = "block";
+            slidingAutoAnimate = setInterval(() => {Cslider1SlidesNumber++; carouselSliding();}, 5000);
+        }, 3000);
+    }
+});
+
+Cslider1RightBtnBox.addEventListener('touchstart',(e)=>{
+    e.preventDefault();
+    clearInterval(slidingAutoAnimate);
+
+    if(CsliderRightBtnEnable){
+        Cslider1SlidesNumber++;
+        carouselSliding();
+        btnSide = 1;
+        slideLoadingInterval = setInterval(SlideLoading,25);
+        CsliderRightBtnEnable = false;
+        CsliderLeftBtnEnable = false;
+        Cslider1RightBtn.style.display = "none";
+        setTimeout(() => {
+            CsliderRightBtnEnable = true; 
+            CsliderLeftBtnEnable = true; 
+            Cslider1RightBtn.style.display = "block";
+            slidingAutoAnimate = setInterval(() => {Cslider1SlidesNumber++; carouselSliding();}, 5000);
+        }, 3000);
+    }
+});
+// <----------------
 
 
 
