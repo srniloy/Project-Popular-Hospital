@@ -9,7 +9,7 @@
 }
 a{
     text-decoration: none;
-    color: black;
+    color: #00984a;
 }
 
 
@@ -430,7 +430,7 @@ a{
 }
 .carousel-slider1-container .slide .content h1{
     margin-top: 15px;
-    font-size: 2.5em;
+    font-size: 2.8em;
     transition: transform 1s;
     transform: scaleX(1.5);
     opacity: 0;
@@ -462,14 +462,214 @@ a{
     margin-left: 8px;
 }
 
+.inpo-flex-box-area{
+    transform: translateY(-45px);
+}
 
+.inpo-flex-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    font-size: 12px;
+}
+.inpo-flex-box .columns{
+    background-color: #00984a;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.inpo-flex-box .columns h2{
+    flex: 8;
+    text-align: center;
+    color: #fff;
+    font-size: 1.45em;
+}
+.inpo-flex-box .columns img{
+    flex: 2;
+    max-width: 32px;
+    margin-left: 10px;
 
-
-
-
-
-
-
+}
 
 
 /*  <-------------------------------- */
+
+
+/* Content box1 ----------------------> */
+.mid-info-layout1-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    font-size: 14px;
+    overflow: hidden;
+}
+.mid-info-layout1-container .first-column{
+    flex: 1;
+}
+.mid-info-layout1-container .first-column .heading h2,
+.mid-info-layout1-container .second-column h2{
+    font-weight: 500;
+    font-size: 1.8em;
+}
+.mid-info-layout1-container .first-column .heading p{
+    font-weight: 600;
+    margin-top: 10px;
+    line-height: 25px;
+    color: #555;
+}
+.mid-info-layout1-container .first-column .flex-box .rows-common .sub-heading{
+    display: flex;
+    align-items: center;
+    color: #00984a;
+    margin: 20px 0;
+}
+.mid-info-layout1-container .first-column .flex-box .rows-common .sub-heading i{
+    font-size: 2.5em;
+}
+.mid-info-layout1-container .first-column .flex-box .rows-common .sub-heading h5{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.mid-info-layout1-container .first-column .flex-box .rows-common p{
+    color: #555;
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+.mid-info-layout1-container .first-column .flex-box .rows-common a{
+    color: #00984a;
+}
+
+.mid-info-layout1-container .second-column .md-content-box{
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+.mid-info-layout1-container .second-column .md-content-box .md-content-box-img{
+    width: fit-content;
+    height: min-content;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.mid-info-layout1-container .second-column .md-content-box .md-content-box-img img{
+    width: 80px;
+    border-radius: 5px;
+    margin: 3px;
+}
+.mid-info-layout1-container .second-column .md-content-box .md-content-box-texts p{
+    color: #555;
+    margin-top: 25px;
+}
+.mid-info-layout1-container .second-column .link-boxs{
+    display: flex;
+    margin-top: 40px;
+}
+.mid-info-layout1-container .second-column .link-boxs .link-box1{
+    margin-right: 20px;
+}
+.mid-info-layout1-container .second-column .link-boxs .link-box-common{
+    padding:20px;
+    background-color: #00984a;
+    display: flex;
+    width:230px;
+}
+.mid-info-layout1-container .second-column .link-boxs .link-box-common i{
+    color: #fff;
+    font-size: 2.8em;
+    margin-right: 20px;
+}
+.mid-info-layout1-container .second-column .link-boxs .link-box-common p{
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+
+
+
+/* <------------------------------------ */
+
+/* Short-review-line -------------------------> */
+
+.short-review-line{
+    width: 100%;
+    background-color: #00984a;
+    margin-top: 50px;
+}
+.short-review-line-container{
+    display: flex;
+    padding: 50px 0;
+}
+.short-review-line-container .first-column{
+    flex: 6;
+    color: rgb(233, 233, 233);
+}
+.short-review-line-container .first-column h3 span{
+    font-family: "Shadows Into Light", cursive;
+    font-size: 32px;
+    font-weight: lighter;
+    line-height: 30px;
+}
+
+.short-review-line-container .first-column p {
+    color: #f0ebeb;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+
+.short-review-line-container .second-column{
+    flex: 3;
+    display: flex;
+    align-items: center;
+}
+.short-review-line-container .second-column button{
+    padding: 16px 24px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #036432;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+
+
+
+/* <------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -120,6 +120,56 @@ Chromebook Pixel -      (2560 x 1700) - (1280 x 850)
     .top-navbar-container .menuBtn{
         display: block;
     }
+    .inpo-flex-box{
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        font-size: 12px;
+    }
+    .mid-info-layout1-container{
+        display: block;
+    }
+    .mid-info-layout1-container .first-column .heading h2{
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+    }
+    .mid-info-layout1-container .second-column h2{
+        text-align: center;
+        margin: 40px 0 30px 0;
+        font-size: 1.5em;
+    }
+    .mid-info-layout1-container .first-column p{
+        text-align: center;
+    }
+    .mid-info-layout1-container .first-column .flex-box .rows-common .sub-heading{
+        justify-content: center;
+    }
+    .mid-info-layout1-container .first-column .flex-box .rows-common .sub-heading h5{
+        margin-left: 18px;
+    }
+    .mid-info-layout1-container .first-column .flex-box .rows-common{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mid-info-layout1-container .second-column .md-content-box .md-content-box-texts p{
+        margin-top: 8px;
+    }
+    .mid-info-layout1-container .second-column .link-boxs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mid-info-layout1-container .second-column .link-boxs .link-box2{
+        width: 80%;
+        margin: 10px 0 0 0;
+    }
+    .mid-info-layout1-container .second-column .link-boxs .link-box1{
+        margin:0;
+        width: 80%;
+    }
+
 
 
 
@@ -148,7 +198,18 @@ Chromebook Pixel -      (2560 x 1700) - (1280 x 850)
         top: 40%;
         transform: translate(-50%,-50%);
     }
-
+    .inpo-flex-box{
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 10px;
+        font-size: 12px;
+    }
+    .short-review-line-container{
+        display: block;
+    }
+    .short-review-line-container .second-column button{
+        
+        margin: 30px 0 0 0;
+    }
 
 
 
@@ -183,6 +244,7 @@ Chromebook Pixel -      (2560 x 1700) - (1280 x 850)
     }
     .carousel-slider1{
         height: 280px;
+        font-size: 8px;
     }
     .carousel-slider1-area .left-btn,
     .carousel-slider1-area .right-btn{
