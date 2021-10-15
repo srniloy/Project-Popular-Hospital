@@ -260,6 +260,21 @@ Chromebook Pixel -      (2560 x 1700) - (1280 x 850)
         width: 30px;
     }
 
+    .c-scr-info-container{
+        flex-direction: column;
+    }
+    .c-scr-info .info{
+        text-align: center;
+        padding: 20px 0 0 0;
+    }
+    .c-scr-info .info .btns{
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    .c-scr-info .info .btns button{
+        margin: 10px 0;
+    }
+
 
 
 

@@ -127,6 +127,7 @@ var slideLoadingInterval;
 
 
 window.onload = ()=>{
+    // Cslider1SlidesNumber++;
     carouselSliding();
 }
 
@@ -153,7 +154,7 @@ function carouselSliding(){
     let number;
     if(Cslider1SlidesNumber <= -4){Cslider1SlidesNumber=0;}
     else if(Cslider1SlidesNumber >= 4){Cslider1SlidesNumber=0;}
-    if(Cslider1SlidesNumber <0){number = Cslider1SlidesNumber*-1;}
+    if(Cslider1SlidesNumber <0){number = Cslider1SlidesNumber*(-1);}
     else{number = Cslider1SlidesNumber;}
 
     Cslider1Slides.forEach(element=>{
@@ -271,7 +272,7 @@ Cslider1Area.addEventListener('mouseover',()=>{
     }, 20);
 });
 Cslider1Area.addEventListener('mouseleave',()=>{
-    slidingAutoAnimate = setInterval(() => {carouselSliding();}, 7000);
+    slidingAutoAnimate = setInterval(() => {Cslider1SlidesNumber++; carouselSliding();}, 7000);
     Cslider1LeftBtnBox.style.opacity = "0";
     Cslider1RightBtnBox.style.opacity = "0";
     setTimeout(() => {
@@ -317,6 +318,115 @@ function SlideLoading(){
 
 
 //  <-------------------------------------------------------
+
+
+// Content scrolling by mouse ------------------------------>
+
+const cScrSliderArea = document.querySelector('.c-scr');
+const cScrSlideBoxContainer = document.querySelector('.c-scr .slide-box-container');
+const cScrSlideBox = document.querySelector('.c-scr .slide-box');
+const cScrSlides = document.querySelectorAll('.c-scr .slides');
+const cScrContents= document.querySelectorAll('.c-scr .contents');
+const cScrDots= document.querySelectorAll('.c-scr .dot');
+
+
+let cScrNum = Math.floor(cScrSlideBoxContainer.offsetWidth/180);
+window.addEventListener('resize',()=>{
+    cScrNum = Math.floor(cScrSlideBoxContainer.offsetWidth/180);
+    cScrSlides.forEach(element=>{
+        element.style.width = cScrSlideBoxContainer.offsetWidth/cScrNum + "px";
+    });
+});
+cScrSlides.forEach(element=>{
+    element.style.width = cScrSlideBoxContainer.offsetWidth/cScrNum + "px";
+});
+
+let cScrDoOrNot = false;
+let cScrClickedPoint;
+let cScrMouseMove;
+let cScrStoreScrollValue=0;
+
+cScrSlideBox.addEventListener('mousedown',(e)=>{
+    e.preventDefault();
+    cScrDoOrNot = true;
+    cScrClickedPoint = e.pageX - cScrSlideBox.offsetLeft;
+});
+cScrSlideBox.addEventListener('mouseup',()=>{
+    cScrDoOrNot = false;
+    cScrStoreScrollValue = cScrSlideBoxContainer.scrollLeft;
+});
+cScrSlideBox.addEventListener('mousemove',(e)=>{
+    e.preventDefault();
+    if(cScrDoOrNot){
+        cScrMouseMove = (e.pageX - cScrSlideBox.offsetLeft) - cScrClickedPoint;
+        cScrSlideBoxContainer.scrollLeft =  cScrStoreScrollValue + (-1*cScrMouseMove);
+        if(cScrStoreScrollValue + (-1*cScrMouseMove) >= cScrSlides[0].offsetWidth){
+            cScrDots.forEach(element=>{
+                element.style.backgroundColor = "#ddd";
+            });
+            cScrDots[1].style.backgroundColor = "#0073ab";
+        }else{
+            cScrDots.forEach(element=>{
+                element.style.backgroundColor = "#ddd";
+            });
+            cScrDots[0].style.backgroundColor = "#0073ab";
+        }
+    }
+});
+cScrSlideBox.addEventListener('mouseleave',()=>{
+    cScrDoOrNot = false;
+    cScrStoreScrollValue = cScrSlideBoxContainer.scrollLeft;
+});
+
+window.addEventListener('touchstart',(t)=>{
+    // console.log(t.touches)
+});
+
+
+cScrSlideBox.addEventListener('touchstart',(e)=>{
+    e.preventDefault();
+    console.log(e.touches[0].pageX);
+    cScrDoOrNot = true;
+    cScrClickedPoint = e.touches[0].pageX - cScrSlideBox.offsetLeft;
+});
+cScrSlideBox.addEventListener('touchend',()=>{
+    cScrDoOrNot = false;
+    cScrStoreScrollValue = cScrSlideBoxContainer.scrollLeft;
+});
+cScrSlideBox.addEventListener('touchmove',(e)=>{
+    e.preventDefault();
+    if(cScrDoOrNot){
+        cScrMouseMove = (e.touches[0].pageX - cScrSlideBox.offsetLeft) - cScrClickedPoint;
+        cScrSlideBoxContainer.scrollLeft =  cScrStoreScrollValue + (-1*cScrMouseMove);
+        if(cScrStoreScrollValue + (-1*cScrMouseMove) >= cScrSlides[0].offsetWidth){
+            cScrDots.forEach(element=>{
+                element.style.backgroundColor = "#ddd";
+            });
+            cScrDots[1].style.backgroundColor = "#0073ab";
+        }else{
+            cScrDots.forEach(element=>{
+                element.style.backgroundColor = "#ddd";
+            });
+            cScrDots[0].style.backgroundColor = "#0073ab";
+        }
+    }
+});
+
+
+
+
+
+
+// <---------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 
 
